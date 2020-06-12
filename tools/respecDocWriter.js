@@ -149,11 +149,11 @@ async function useLocalReSpec(page) {
       return false;
     }
 
-    const { protocol, host, pathname: path } = new URL(req.url());
+    const { protocol, host, pathname } = new URL(req.url());
     return (
-      (host === "www.w3.org" && path.startsWith("/Tools/respec/")) ||
-      (host === "w3c.github.io" && path.startsWith("/respec/builds/")) ||
-      (protocol === "file:" && /builds\/respec-[\w-]+\.js$/.test(path))
+      (host === "www.w3.org" && pathname.startsWith("/Tools/respec/")) ||
+      (host === "w3c.github.io" && pathname.startsWith("/respec/builds/")) ||
+      (protocol === "file:" && /builds\/respec-[\w-]+\.js$/.test(pathname))
     );
   };
 
