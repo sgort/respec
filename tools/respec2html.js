@@ -67,6 +67,12 @@ const optionList = [
   },
   {
     default: false,
+    description: "Use local ReSpec version instead of the one in document.",
+    name: "use-local",
+    type: Boolean,
+  },
+  {
+    default: false,
     description: "Disable Chromium sandboxing if needed.",
     name: "disable-sandbox",
     type: Boolean,
@@ -137,6 +143,7 @@ const usageSections = [
       timeout: parsedArgs.timeout * 1000,
       disableSandbox: parsedArgs["disable-sandbox"],
       debug: parsedArgs.debug,
+      useLocal: parsedArgs["use-local"],
     });
   } catch (err) {
     console.error(colors.error(err.stack));

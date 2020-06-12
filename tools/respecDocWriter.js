@@ -9,7 +9,7 @@
 const os = require("os");
 const puppeteer = require("puppeteer");
 const colors = require("colors");
-const { mkdtemp, writeFile } = require("fs").promises;
+const { mkdtemp, readFile, writeFile } = require("fs").promises;
 const path = require("path");
 colors.setTheme({
   debug: "cyan",
@@ -60,7 +60,12 @@ async function fetchAndWrite(
   src,
   out,
   whenToHalt,
-  { timeout = 300000, disableSandbox = false, debug = false } = {}
+  {
+    timeout = 300000,
+    disableSandbox = false,
+    debug = false,
+    useLocal = false,
+  } = {}
 ) {
   const timer = createTimer(timeout);
 
@@ -71,8 +76,12 @@ async function fetchAndWrite(
     args,
     devtools: debug,
   });
+
   try {
     const page = await browser.newPage();
+    if (useLocal) {
+      await useLocalReSpec(page);
+    }
     const handleConsoleMessages = makeConsoleMsgHandler(page);
     const haltFlags = {
       error: false,
@@ -114,6 +123,44 @@ async function fetchAndWrite(
   } finally {
     await browser.close();
   }
+}
+
+/**
+ * Replace the ReSpec script in document with the locally installed one.
+ * This is useful in CI env or when you want to pin the ReSpec version.
+ *
+ * @assumption The ReSpec script being used in the document is hosted on either
+ * w3.org or w3c.github.io. If this assumption doesn't hold true, this function
+ * will timeout.
+ *
+ * @param {import("puppeteer").Page} page
+ */
+async function useLocalReSpec(page) {
+  await page.setRequestInterception(true);
+
+  // The following regex matches ONLY:
+  // [https:]//w3.org/Tools/respec/${profile}
+  // [https:]//w3c.github.io/respec/builds/${profile}.js
+  const respecRegex = /(?:https:)?\/\/(?:www\.w3\.org\/Tools\/respec|w3c\.github\.io\/respec\/builds)\/(respec-[\w-]+)(?:\.js)?/;
+
+  page.on("request", async function requestInterceptor(request) {
+    const url = request.url();
+    if (!respecRegex.test(url)) {
+      await request.continue();
+      return;
+    }
+
+    const profile = url.match(respecRegex)[1];
+    const localPath = path.join(__dirname, "..", "builds", `${profile}.js`);
+    console.log(colors.info(`Intercepted ${url} to respond with ${localPath}`));
+    await request.respond({
+      contentType: "text/javascript; charset=utf-8",
+      body: await readFile(localPath),
+    });
+    // Workaround for https://github.com/puppeteer/puppeteer/issues/4208
+    page.removeListener("request", requestInterceptor);
+    await page.setRequestInterception(false);
+  });
 }
 
 /**
