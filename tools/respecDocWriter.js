@@ -126,31 +126,46 @@ async function fetchAndWrite(
 }
 
 /**
- * Replace the ReSpec script in document with the locally installed one.
- * This is useful in CI env or when you want to pin the ReSpec version.
+ * Replace the ReSpec script in document with the locally installed one. This is
+ * useful in CI env or when you want to pin the ReSpec version.
  *
  * @assumption The ReSpec script being used in the document is hosted on either
- * w3.org or w3c.github.io. If this assumption doesn't hold true, this function
- * will timeout.
+ * w3.org or w3c.github.io. If this assumption doesn't hold true (interception
+ * fails), this function will timeout.
+ *
+ * The following ReSpec URLs are supported:
+ * [https:]//www.w3.org/Tools/respec/${profile}
+ * [https:]//w3c.github.io/respec/builds/${profile}.js
+ * file:///home/path-to-respec/builds/${profile}.js
  *
  * @param {import("puppeteer").Page} page
  */
 async function useLocalReSpec(page) {
   await page.setRequestInterception(true);
+  const respecProfileRegex = /\/(respec-[\w-]+)(?:\.js)?$/;
 
-  // The following regex matches ONLY:
-  // [https:]//w3.org/Tools/respec/${profile}
-  // [https:]//w3c.github.io/respec/builds/${profile}.js
-  const respecRegex = /(?:https:)?\/\/(?:www\.w3\.org\/Tools\/respec|w3c\.github\.io\/respec\/builds)\/(respec-[\w-]+)(?:\.js)?/;
+  /** @param {import("puppeteer").Request} req */
+  const isRespecScript = req => {
+    if (req.method() !== "GET" || req.resourceType() !== "script") {
+      return false;
+    }
+
+    const { protocol, host, pathname: path } = new URL(req.url());
+    return (
+      (host === "www.w3.org" && path.startsWith("/Tools/respec/")) ||
+      (host === "w3c.github.io" && path.startsWith("/respec/builds/")) ||
+      (protocol === "file:" && /builds\/respec-[\w-]+\.js$/.test(path))
+    );
+  };
 
   page.on("request", async function requestInterceptor(request) {
-    const url = request.url();
-    if (!respecRegex.test(url)) {
+    if (!isRespecScript(request)) {
       await request.continue();
       return;
     }
 
-    const profile = url.match(respecRegex)[1];
+    const url = new URL(request.url());
+    const profile = url.pathname.match(respecProfileRegex)[1];
     const localPath = path.join(__dirname, "..", "builds", `${profile}.js`);
     console.log(colors.info(`Intercepted ${url} to respond with ${localPath}`));
     await request.respond({
