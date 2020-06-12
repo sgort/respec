@@ -3,15 +3,13 @@
 /* eslint-env node */
 "use strict";
 const port = 5000;
-const testURLs = [
-  `http://localhost:${port}/examples/basic.built.html`,
-  `http://localhost:${port}/examples/basic.html`,
-];
 const colors = require("colors");
 const { exec } = require("child_process");
 
 const handler = require("serve-handler");
 const http = require("http");
+
+const nullDevice = process.platform === "win32" ? "\\\\.\\NUL" : "/dev/null";
 
 function toExecutable(cmd) {
   return {
@@ -33,23 +31,30 @@ function toExecutable(cmd) {
   };
 }
 
+function toCommand(url, { useLocal = false } = {}) {
+  const useLocalFlag = useLocal ? " --use-local" : "";
+  return `node ./tools/respec2html.js -e${useLocalFlag} --timeout 30 --src ${url} --out ${nullDevice}`;
+}
+
+const commands = [
+  toCommand(`http://localhost:${port}/examples/basic.built.html`),
+  toCommand(`http://localhost:${port}/examples/basic.html`),
+  toCommand(`http://localhost:${port}/examples/basic.built.html`, {
+    useLocal: true,
+  }),
+];
+const executables = commands.map(toExecutable);
+
 async function runRespec2html() {
   const server = http.createServer(handler);
   server.listen(port);
 
   const errors = new Set();
-  // Incrementally spawn processes and add them to process counter.
-  const executables = testURLs.map(url => {
-    const nullDevice =
-      process.platform === "win32" ? "\\\\.\\NUL" : "/dev/null";
-    const disableSandbox = process.env.TRAVIS ? " --disable-sandbox" : "";
-    const cmd = `node ./tools/respec2html.js -e${disableSandbox} --timeout 30 --src ${url} --out ${nullDevice}`;
-    return toExecutable(cmd);
-  });
+
   let testCount = 1;
   for (const exe of executables) {
     try {
-      const testInfo = colors.green(`(test ${testCount++}/${testURLs.length})`);
+      const testInfo = colors.green(`(test ${testCount++}/${commands.length})`);
       const msg = ` 👷‍♀️  ${exe.cmd} ${testInfo}`;
       debug(msg);
       await exe.run();
