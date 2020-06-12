@@ -67,7 +67,7 @@ const optionList = [
   },
   {
     default: false,
-    description: "Use local ReSpec version instead of the one in document.",
+    description: "Use locally installed ReSpec instead of the one in document.",
     name: "use-local",
     type: Boolean,
   },
