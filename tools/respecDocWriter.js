@@ -152,13 +152,17 @@ async function useLocalReSpec(page) {
     }
 
     const { host, pathname } = new URL(req.url());
-    return (
-      (host === "www.w3.org" &&
+    if (host === "www.w3c.org") {
+      return (
         pathname.startsWith("/Tools/respec/") &&
-        !pathname.includes("respec-highlight")) ||
-      (host === "w3c.github.io" && pathname.startsWith("/respec/builds/")) ||
-      /\/builds\/respec-[\w-]+\.js$/.test(pathname)
-    );
+        !pathname.includes("respec-highlight")
+      );
+    }
+    if (host === "w3c.github.io") {
+      return pathname.startsWith("/respec/builds/");
+    }
+    // localhost, file://, and everything else
+    return /\/builds\/respec-[\w-]+\.js$/.test(pathname);
   };
 
   page.on("request", async function requestInterceptor(request) {
