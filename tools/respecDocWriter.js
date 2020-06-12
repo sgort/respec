@@ -134,9 +134,11 @@ async function fetchAndWrite(
  * fails), this function will timeout.
  *
  * The following ReSpec URLs are supported:
- * [https:]//www.w3.org/Tools/respec/${profile}
- * [https:]//w3c.github.io/respec/builds/${profile}.js
+ * https://www.w3.org/Tools/respec/${profile}
+ * https://w3c.github.io/respec/builds/${profile}.js
  * file:///home/path-to-respec/builds/${profile}.js
+ * http://localhost:PORT/builds/${profile}.js
+ * https://example.com/builds/${profile}.js
  *
  * @param {import("puppeteer").Page} page
  */
@@ -149,11 +151,13 @@ async function useLocalReSpec(page) {
       return false;
     }
 
-    const { protocol, host, pathname } = new URL(req.url());
+    const { host, pathname } = new URL(req.url());
     return (
-      (host === "www.w3.org" && pathname.startsWith("/Tools/respec/")) ||
+      (host === "www.w3.org" &&
+        pathname.startsWith("/Tools/respec/") &&
+        !pathname.includes("respec-highlight")) ||
       (host === "w3c.github.io" && pathname.startsWith("/respec/builds/")) ||
-      (protocol === "file:" && /builds\/respec-[\w-]+\.js$/.test(pathname))
+      /\/builds\/respec-[\w-]+\.js$/.test(pathname)
     );
   };
 
