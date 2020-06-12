@@ -145,27 +145,6 @@ async function fetchAndWrite(
 async function useLocalReSpec(page) {
   await page.setRequestInterception(true);
 
-  /** @param {import("puppeteer").Request} req */
-  const isRespecScript = req => {
-    if (req.method() !== "GET" || req.resourceType() !== "script") {
-      return false;
-    }
-
-    const { host, pathname } = new URL(req.url());
-    switch (host) {
-      case "www.w3.org":
-        return (
-          pathname.startsWith("/Tools/respec/") &&
-          !pathname.includes("respec-highlight")
-        );
-      case "w3c.github.io":
-        return pathname.startsWith("/respec/builds/");
-      default:
-        // localhost, file://, and everything else
-        return /\/builds\/respec-[\w-]+\.js$/.test(pathname);
-    }
-  };
-
   page.on("request", async function requestInterceptor(request) {
     if (!isRespecScript(request)) {
       await request.continue();
@@ -185,6 +164,26 @@ async function useLocalReSpec(page) {
     page.removeListener("request", requestInterceptor);
     await page.setRequestInterception(false);
   });
+}
+
+/** @param {import("puppeteer").Request} req */
+function isRespecScript(req) {
+  if (req.method() !== "GET" || req.resourceType() !== "script") {
+    return false;
+  }
+
+  const { host, pathname: path } = new URL(req.url());
+  switch (host) {
+    case "www.w3.org":
+      return (
+        path.startsWith("/Tools/respec/") && !path.includes("respec-highlight")
+      );
+    case "w3c.github.io":
+      return path.startsWith("/respec/builds/");
+    default:
+      // localhost, file://, and everything else
+      return /\/builds\/respec-[\w-]+\.js$/.test(path);
+  }
 }
 
 /**
