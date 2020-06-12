@@ -142,7 +142,6 @@ async function fetchAndWrite(
  */
 async function useLocalReSpec(page) {
   await page.setRequestInterception(true);
-  const respecProfileRegex = /\/(respec-[\w-]+)(?:\.js)?$/;
 
   /** @param {import("puppeteer").Request} req */
   const isRespecScript = req => {
@@ -165,6 +164,7 @@ async function useLocalReSpec(page) {
     }
 
     const url = new URL(request.url());
+    const respecProfileRegex = /\/(respec-[\w-]+)(?:\.js)?$/;
     const profile = url.pathname.match(respecProfileRegex)[1];
     const localPath = path.join(__dirname, "..", "builds", `${profile}.js`);
     console.log(colors.info(`Intercepted ${url} to respond with ${localPath}`));
