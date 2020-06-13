@@ -53,7 +53,7 @@ async function runRespec2html() {
 
   for (const [i, exe] of executables.entries()) {
     try {
-      const testInfo = colors.green(`(test ${i + 1}/${commands.length})`);
+      const testInfo = colors.green(`(test ${i + 1}/${executables.length})`);
       const msg = ` 👷‍♀️  ${exe.cmd} ${testInfo}`;
       debug(msg);
       await exe.run();
