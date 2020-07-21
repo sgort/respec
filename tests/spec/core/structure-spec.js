@@ -172,6 +172,77 @@ describe("Core - Structure", () => {
     );
   });
 
+  describe("data-max-toc", () => {
+    it("skips current section from ToC with data-max-toc=0", async () => {
+      const body = `
+        <section><h2>PASS</h2></section>
+        <section data-max-toc="0">
+          <h2>SKIPPED</h2>
+        </section>
+      `;
+      const ops = makeStandardOps(null, body);
+      const doc = await makeRSDoc(ops);
+
+      const toc = doc.getElementById("toc");
+      expect(toc.querySelectorAll(":scope > ol > li").length).toBe(1);
+      const tocItem = toc.querySelector(":scope > ol > li");
+      expect(tocItem.textContent.trim()).toContain("PASS");
+      expect(tocItem.textContent.trim()).not.toContain("SKIPPED");
+    });
+
+    it("skips descendent sections from ToC", async () => {
+      const body = `
+        <section data-max-toc="2">
+          <h2>PASS 1</h2>
+          <section>
+            <h2>PASS 2</h2>
+            <section>
+              <h2>SKIPPED</h2>
+            </section>
+          </section>
+        </section>
+      `;
+      const ops = makeStandardOps(null, body);
+      const doc = await makeRSDoc(ops);
+      const toc = doc.getElementById("toc");
+
+      const level1Item = toc.querySelector(":scope > ol > li");
+      expect(level1Item).toBeTruthy();
+      expect(level1Item.textContent).toContain("1. PASS 1");
+
+      const level2Item = toc.querySelector(":scope > ol > li > ol > li");
+      expect(level2Item).toBeTruthy();
+      expect(level2Item.textContent).toContain("1.1 PASS 2");
+
+      const level3Item = toc.querySelector(":scope > ol > li > ol > li li");
+      expect(level3Item).toBeFalsy();
+      expect(toc.textContent).not.toContain("SKIPPED");
+      expect(toc.textContent).not.toContain("1.1.1");
+    });
+
+    it("ignores data-max-toc if not in valid range", async () => {
+      const body = `
+        <section id="test" data-max-toc="7">
+          <h2>PASS 0</h2>
+          <section>
+            <h2>PASS 1</h2>
+            <section>
+              <h2>PASS 2</h2>
+            </section>
+          </section>
+        </section>
+      `;
+      const ops = makeStandardOps(null, body);
+      const doc = await makeRSDoc(ops);
+      const toc = doc.getElementById("toc");
+
+      expect(toc.querySelectorAll(":scope .toc").length).toBe(3);
+      expect(doc.getElementById("test").classList).toContain(
+        "respec-offending-element"
+      );
+    });
+  });
+
   it("should correctly put all headings until maxTocLevel in ToC", async () => {
     const times = (n, fn) =>
       Array.from({ length: n }, (_, i) => fn(i)).join("\n");
@@ -275,5 +346,28 @@ describe("Core - Structure", () => {
     expect(links[0].textContent).toBe("1. ONE");
     expect(links[1].hash).toBe("#zwei");
     expect(links[1].textContent).toBe("2. TWO");
+  });
+
+  it("generates correct appendix numbers", async () => {
+    // Choosing 53 as 53/26 gives us 3 different sequences of appendix
+    // numbers: A,B,C... AA,AB,AC... BA,BB,BC..
+    const appendixCount = 53;
+
+    const body = Array.from(
+      { length: appendixCount },
+      (_, i) => `<section class="appendix"><h2>${i + 1}</h2></section>`
+    ).join("\n");
+    const ops = makeStandardOps(null, body);
+    const doc = await makeRSDoc(ops);
+
+    const toc = doc.getElementById("toc");
+    const sectionNumbers = toc.querySelectorAll(".secno");
+    expect(sectionNumbers.length).toBe(appendixCount);
+    expect(sectionNumbers[0].textContent.trim()).toBe("A.");
+    expect(sectionNumbers[1].textContent.trim()).toBe("B.");
+    expect(sectionNumbers[25].textContent.trim()).toBe("Z.");
+    expect(sectionNumbers[26].textContent.trim()).toBe("AA.");
+    expect(sectionNumbers[27].textContent.trim()).toBe("AB.");
+    expect(sectionNumbers[52].textContent.trim()).toBe("BA.");
   });
 });
