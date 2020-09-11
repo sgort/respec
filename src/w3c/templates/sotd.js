@@ -126,7 +126,7 @@ function renderNotRec(conf) {
   let reviewPolicy = "";
   if (conf.specStatus === "CRD") {
     statusExplanation =
-      "A Candidate Recommendation Draft integrates changes from the previous Candidate Recommendation that the Working Group intends to include in a subsequent Candidate Recommendation Snapshot.";
+      "A Candidate Recommendation Draft is published to solicit review of intended changes from the previous Candidate Recommendation Snapshot.";
     if (conf.lsMode) {
       updatePolicy =
         "This document is maintained and updated at any time. Some parts of this document are work in progress. ";
@@ -203,14 +203,14 @@ function renderIsRec({
         : ""}
     </p>
     ${revisionTypes.includes("addition")
-      ? html`<p class="addition">
-          Proposed additions are marked in the document.
-        </p>`
+      ? html`<div class="addition proposed">
+          <p>Proposed additions are marked in the document.</p>
+        </div>`
       : ""}
     ${revisionTypes.includes("correction")
-      ? html`<p class="correction">
-          Proposed corrections are marked in the document.
-        </p>`
+      ? html`<div class="correction proposed">
+          <p>Proposed corrections are marked in the document.</p>
+        </div>`
       : ""}
     ${reviewTarget
       ? html`<p>
