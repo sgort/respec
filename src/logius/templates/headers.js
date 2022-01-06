@@ -142,6 +142,7 @@ export default (conf, options) => {
           ${inPlaceModificationDate(conf.modificationDate)}`
         : ""}
     </h2>
+	<a lang="nl" href="https://publicatie.centrumvoorstandaarden.nl/">Overzicht standaarden</a>
     <dl>
       ${!conf.isNoTrack
         ? html`
