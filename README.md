@@ -1,3 +1,11 @@
+> Legitimaat branch
+>
+> this is an attempt to make a ReSpec variant for Ministry of the Interior and Kingdom Relations that
+> - used for LegitiMaat
+> - uses design tokens from NL Design system
+> - provides instructions for use elsewhere in The Netherlands by public organisations
+>
+
 # ReSpec
 
 [![Backers on Open Collective](https://opencollective.com/respec/backers/badge.svg)](#backers)
