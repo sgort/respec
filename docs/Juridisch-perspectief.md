@@ -2,7 +2,7 @@
 
 Het juridisch perspectief: kernvraag die de jurist beantwoord wil hebben: Is de uitvoering conform de wet en hoe zijn de ABBB (+ verbod van discriminatie) geborgd?
 
-## **Wet**
+## Wet
 
 Bevat de wet discretionaire bevoegdheden?
 
@@ -12,7 +12,7 @@ Kan het bestuursorgaan aangeven hoe de beoordelingsruimte wordt ingevuld en welk
 
 Is bij wet bepaald welke gegevens van andere bestuursorganen gebruikt moeten worden?
 
-## **Analyse**
+## Analyse
 
 Hoe wordt de analyse van de verzamelde bronnen (zie A4 van Robert) gedaan?
 
@@ -31,7 +31,7 @@ Wordt er een gestructureerde analyse gedaan?
 Feedbackloop: Hoe bepaalt de bestuurlijk verantwoordelijke dat fouten, interne
 signalen, aanbevelingen van de ombudsman, jurisprudentie en maatschappelijke veranderingen verwerkt moeten worden in de systemen?
 
-## **Toepasbare regels**
+## Toepasbare regels
 
 Is de vertaling van wet naar regels leesbaar en begrijpelijk?
 
@@ -50,7 +50,7 @@ Hoe worden regels gevalideerd?
 
 Worden voorbeelden gebruikt voor validatie (testgevallen) nu al gemaakt?
 
-## **Functioneel ontwerp (met nadere regels)**
+## Functioneel ontwerp (met nadere regels)
 
 Is er een Kafkaknop? Op welke wijze is voorzien in een routine voor onvoorziene zaken/onbedoelde uitkomsten? Zoals nader te bepalen of medewerker mag handmatig overrulen. Of een mogelijkheid om gegevens te gebruiken die door de burger worden gegeven? Is er bijv. een ‘beweringenregister’?
 
@@ -58,7 +58,7 @@ In welke gevallen mag/moet een medewerker overrulen?
 
 In welke gevallen wordt voorafgaand aan het besluit contact opgenomen met de burger en in welke gevallen wordt een piepsysteem gehanteerd? (eventueel in relatie tot foutmarges)
 
-## **Code**
+## Code
 
 Welke door mensen gemaakte tussenstappen zijn er om van regels naar code te komen?
 
@@ -74,11 +74,11 @@ Feedbackloop naar fo/regels?
 
 Kan vastgesteld worden door een peer deskundige dat de code conform de regels is?
 
-## **Werkinstructie**
+## Werkinstructie
 
 Is de werkinstructie gebaseerd op de toepasbare regels?
 
-## **Digitale interactie**
+## Digitale interactie
 
 Kan de burger zelf gegevens wijzigen?
 
@@ -86,7 +86,7 @@ Is de interactie gebaseerd op de toepasbare regels?
 
 Wat is het resultaat van de digitale interactie en is de juridische basis van dat resultaat duidelijk?
 
-## **Besluit (Brief)**
+## Besluit (Brief)
 
 Is het besluit gebaseerd op de toepasbare regels?
 
