@@ -1,172 +1,95 @@
-Multidisciplinaire werkmethode
+# Juridisch perspectief
 
-Instrumenten:
+Het juridisch perspectief: kernvraag die de jurist beantwoord wil hebben: Is de uitvoering conform de wet en hoe zijn de ABBB (+ verbod van discriminatie) geborgd?
 
-**Documentatie
-voor de onderzoekers**
+## **Wet**
 
-**Vragenlijst
-die op voorhand beantwoord zou moeten worden door het bestuursorgaan
-(dit)**
+Bevat de wet discretionaire bevoegdheden?
 
-**Detailanalyse
-(interview en gespreksronde)**
+Geldt er een wettelijke hardheidsclausule, zo ja: voor wie en in welke gevallen?
 
-**Handleiding
-voor onderzoekers (a la visitatiecommissie)**
+Kan het bestuursorgaan aangeven hoe de beoordelingsruimte wordt ingevuld en welke belangen hier doorslaggevend zijn (efficiency / fraudebestrijding / dienstverlening/ vertrouwen in de burger)?
 
-De Vragenlijst
-voor het JURIDISCH perspectief
+Is bij wet bepaald welke gegevens van andere bestuursorganen gebruikt moeten worden?
 
-Het juridisch
-perspectief: kernvraag die de jurist beantwoord wil hebben:
+## **Analyse**
 
-Is de uitvoering
-conform de wet en hoe zijn de ABBB (+ verbod van discriminatie)
-geborgd?
+Hoe wordt de analyse van de verzamelde bronnen (zie A4 van Robert) gedaan?
 
-**Wet**
+Welke disciplines zijn daarbij betrokken?
 
-Bevat de wet
-discretionaire bevoegdheden?
+Hoe is de invulling van de discretionaire bevoegdheid vastgelegd?
 
-Geldt er een
-wettelijke hardheidsclausule, zo ja: voor wie en in welke gevallen?
+Hoe is de invulling van de beoordelingsruimte vastgelegd?
 
-Kan het
-bestuursorgaan aangeven hoe de beoordelingsruimte wordt ingevuld en
-welke belangen hier doorslaggevend zijn (efficiency /
-fraudebestrijding / dienstverlening/ vertrouwen in de burger)?
+Hoe wordt bepaald welke bronnen gebruikt worden bij de geautomatiseerde uitvoering.
 
-Is bij wet
-bepaald welke gegevens van andere bestuursorganen gebruikt moeten
-worden?
+Als er intern beleid is vastgelegd; wat is de reden om dit niet de status van beleidsregels te geven?
 
-**Analyse**
+Wordt er een gestructureerde analyse gedaan?
 
-Hoe wordt de
-analyse van de verzamelde bronnen (zie A4 van Robert) gedaan?
+Feedbackloop: Hoe bepaalt de bestuurlijk verantwoordelijke dat fouten, interne
+signalen, aanbevelingen van de ombudsman, jurisprudentie en maatschappelijke veranderingen verwerkt moeten worden in de systemen?
 
-Welke disciplines
-zijn daarbij betrokken?
+## **Toepasbare regels**
 
-Hoe is de
-invulling van de discretionaire bevoegdheid vastgelegd?
+Is de vertaling van wet naar regels leesbaar en begrijpelijk?
 
-Hoe is de
-invulling van de beoordelingsruimte vastgelegd?
+Hoe zijn de ABBB (+ verbod van discriminatie) verwerkt?
 
-Hoe wordt bepaald
-welke bronnen gebruikt worden bij de geautomatiseerde uitvoering.
+Zijn de regels herleidbaar naar (juridische) bronnen?
 
-Als er intern
-beleid is vastgelegd; wat is de reden om dit niet de status van
-beleidsregels te geven?
+Is de interpretatie van (juridische) bronnen controleerbaar en betwistbaar?
 
-Wordt er een
-gestructureerde analyse gedaan?
+Feedback: Hoe worden fouten, interne signalen, aanbevelingen van de ombudsman,
+jurisprudentie en maatschappelijke veranderingen verwerkt in nieuwe regels ?
 
-Feedbackloop: Hoe
-bepaalt de bestuurlijk verantwoordelijke dat fouten, interne
-signalen, aanbevelingen van de ombudsman, jurisprudentie en
-maatschappelijke veranderingen verwerkt moeten worden in de systemen
-?
+Hoe wordt trace tussen wet/analyse en regels vastgelegd/gehouden?
 
-**Toepasbare
-regels**
+Hoe worden regels gevalideerd?
 
-Is de vertaling
-van wet naar regels leesbaar en begrijpelijk?
+Worden voorbeelden gebruikt voor validatie (testgevallen) nu al gemaakt?
 
-Hoe zijn de ABBB
-(+ verbod van discriminatie) verwerkt?
+## **Functioneel ontwerp (met nadere regels)**
 
-Zijn de regels
-herleidbaar naar (juridische) bronnen?
+Is er een Kafkaknop? Op welke wijze is voorzien in een routine voor onvoorziene zaken/onbedoelde uitkomsten? Zoals nader te bepalen of medewerker mag handmatig overrulen. Of een mogelijkheid om gegevens te gebruiken die door de burger worden gegeven? Is er bijv. een ‘beweringenregister’?
 
-Is de
-interpretatie van (juridische) bronnen controleerbaar en betwistbaar?
+In welke gevallen mag/moet een medewerker overrulen?
 
-Feedback: Hoe
-worden fouten, interne signalen, aanbevelingen van de ombudsman,
-jurisprudentie en maatschappelijke veranderingen verwerkt in nieuwe
-regels ?
+In welke gevallen wordt voorafgaand aan het besluit contact opgenomen met de burger en in welke gevallen wordt een piepsysteem gehanteerd? (eventueel in relatie tot foutmarges)
 
-Hoe wordt trace
-tussen wet/analyse en regels vastgelegd/gehouden?
+## **Code**
 
-Hoe worden regels
-gevalideerd?
+Welke door mensen gemaakte tussenstappen zijn er om van regels naar code te komen?
 
-Worden
-voorbeelden gebruikt voor validatie (testgevallen) nu al gemaakt?
-
-**Functioneel
-ontwerp (met nadere regels)**
-
-Is er een
-Kafkaknop? Op welke wijze is voorzien in een routine voor onvoorziene
-zaken/onbedoelde uitkomsten? Zoals nader te bepalen of medewerker mag
-handmatig overrulen. Of een mogelijkheid om gegevens te gebruiken die
-door de burger worden gegeven? ‘beweringenregister’
-
-In welke gevallen
-mag/moet een medewerker overrulen?
-
-In welke gevallen
-wordt voorafgaand aan het besluit contact opgenomen met de burger en
-in welke gevallen wordt een piepsysteem gehanteerd? (eventueel in
-relatie tot foutmarges)
-
-**Code**
-
-Welke door mensen
-gemaakte tussenstappen zijn er om van regels naar code te komen?
-
-Hoe wordt
-indirect / verborgen beleid voorkomen? Is er een feedbackloop naar
+Hoe wordt indirect / verborgen beleid voorkomen? Is er een feedbackloop naar
 beleid/wetgever?
 
-Hoe wordt in deze
-fase getest/gevalideerd ten opzichte van de regels?
+Hoe wordt in deze fase getest/gevalideerd ten opzichte van de regels?
 
-Is er een trace
-tussen fo/code en juridische bron vastgelegd en gehouden?
+Is er een trace tussen fo/code en juridische bron vastgelegd en gehouden?
 
-Hoe wordt de eis
-van zorgvuldige besluitvorming toegepast: entry-exitcriteria?
+Hoe wordt de eis van zorgvuldige besluitvorming toegepast: entry-exitcriteria?
 Feedbackloop naar fo/regels?
 
-Kan vastgesteld
-worden door een peer deskundige dat de code conform de regels is?
+Kan vastgesteld worden door een peer deskundige dat de code conform de regels is?
 
-**Werkinstructie**
+## **Werkinstructie**
 
-Is de
-werkinstructie gebaseerd op de toepasbare regels?
+Is de werkinstructie gebaseerd op de toepasbare regels?
 
-**Digitale
-interactie**
+## **Digitale interactie**
 
-Kan de burger
-zelf gegevens wijzigen?
+Kan de burger zelf gegevens wijzigen?
 
-Is de interactie
-gebaseerd op de toepasbare regels?
+Is de interactie gebaseerd op de toepasbare regels?
 
-Wat is het
-resultaat van de digitale interactie en is de juridische basis van
-dat resultaat duidelijk?
+Wat is het resultaat van de digitale interactie en is de juridische basis van dat resultaat duidelijk?
 
-**Besluit
-(Brief)**
+## **Besluit (Brief)**
 
-Is het besluit
-gebaseerd op de toepasbare regels?
+Is het besluit gebaseerd op de toepasbare regels?
 
-Is de motivering
-in het besluit gelijk aan de toepasbare regels die geleid hebben tot
-het besluit?
+Is de motivering in het besluit gelijk aan de toepasbare regels die geleid hebben tot het besluit?
 
-Klopt de
-motivering?
+Klopt de motivering?
