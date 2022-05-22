@@ -1,4 +1,6 @@
-# Aanleiding en onderzoeksvraag
+# De opdracht
+
+## Aanleiding en onderzoeksvraag
 
 Nu steeds vaker wordt gesproken over *toezicht op algoritmen* is het belangrijk om te weten hoe een onderzoek naar algoritmen door derden uitgevoerd kan worden op zo’n manier dat de dagelijkse uitvoeringsprocessen niet verstoord worden.
 
@@ -17,13 +19,13 @@ idee om deze documenten te gaan onderzoeken.
 
 [4](#sdfootnote4anc) [Publicatie Raad van State over digitalisering in wetgeving en bestuursrechtspraak - Raad van State](https://www.raadvanstate.nl/@125918/publicatie-digitalisering/)
 
-# Aanpak en uitgangspunten
+## Aanpak en uitgangspunten
 
-## Aanpak
+### *Aanpak*
 
 Om ergens te kunnen starten willen wij aan de hand van deze beslisregels of andere vormen van beschrijvingen met medewerkers van uitvoeringsinstellingen ontdekken wat een geschikte onderzoeksmethode zou zijn. Hierdoor wordt geborgd dat het resultaat (het opleveren van een multidisciplinaire werkmethode) aansluit bij de praktijk. Bijkomend voordeel is er ook voor de uitvoeringsinstellingen. Door dit onderzoek te faciliteren, wordt voorkomen dat er later vanuit een hiërarchische positie eisen aan de uitvoering gesteld worden die de uitvoering eerder hinderen dan faciliteren. Ook kan het leiden tot een pool van deskundigen die elkaars processen beoordelen (denk aan een gateway review). Dit betekent dat het lerend vermogen van de overheid toe kan nemen. 
 
-## Doel
+### *Doel*
 
 Het doel is dus: een werkmethode ontwikkelen voor het doen van onderzoek door derden naar de ontwikkeling van algoritmen en het gebruik van algoritmen door een overheidsorganisatie. Het is de bedoeling dat met de werkmethode derden in staat zijn zich een oordeel te vormen over de algoritmische uitvoering door de uitvoeringsinstellingen. Daarvoor is bijgaand denkschema geformuleerd.
 
@@ -43,7 +45,7 @@ Om het onderzoek voldoende concreet maar ook behapbaar te houden stellen we voor
 
 - de werkmethode is geschikt voor herhaald gebruik in verschillende publieke organisaties.
 
-## Aanpak van het onderzoek
+### *Wijze van het onderzoek*
 
 De werkmethode zal werkende weg worden ontwikkeld door het kernteam en enthousiastelingen die deskundig zijn en het leuk vinden om te leren van andere disciplines. Hierbij zal vooral gebruik worden gemaakt van de inzet en tijd van de medewerkers van de uitvoeringsinstellingen zelf. Zij kennen de uitvoering en de dilemma’s. Er wordt alleen gekeken naar een bestaande geautomatiseerde uitvoering van wetgeving door middel van vaste algoritmen. Dit betekent dat we niet kijken naar lerende algoritmen zoals toepassingen met machine learning. We willen via de Manifestgroep zorgen voor een zo breed mogelijk bereik.
 

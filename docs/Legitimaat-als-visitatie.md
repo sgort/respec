@@ -1,4 +1,4 @@
-# De Legitimaat als visitatie-instrument
+# LegitiMaat als visitatie-instrument
 
 ## Inleiding
 
@@ -24,7 +24,7 @@ De LegitiMaat is een vragenlijst die vragen bevat over de wijze van ontwikkelen 
 
 Beantwoording van de vragen geeft inzicht in de wijze waarop de organisatie de ontwikkeling en toepassing heeft ingericht en wat de mate van ‘volwassenheid’ is op dit vlak.
 
-## Hoe verloopt een visitatie met de LegitiMaat?
+## Hoe verloopt een visitatie?
 
 Op het web zijn verschillende draaiboeken te vinden voor collegiale visitaties; uit een aantal daarvan hebben we geput voor de LegitiMaat.[4](#sdfootnote4sym)
 
@@ -38,14 +38,14 @@ onafhankelijke voorzitter en secretaris (dwz. niet afkomstig uit de visiterende 
 
 Hierna worden de drie fasen beschreven.
 
-### *Fase 1, Zelfevaluatie*
+### *Fase 1 - Zelfevaluatie*
 
 De organisatie voert de zelfevaluatie uit aan de hand van de LegitiMaat-vragenlijst. Een coördinator zet de lijst uit bij de betrokken onderdelen, bewaakt de voorgang en checkt de aangeleverde input op duidelijkheid e.d.
 
 De start van de zelfevaluatie is afhankelijk van de vraag wanneer het visitatieteam het visitatiebezoek kan afleggen. Als richtlijn kan worden aangehouden dat de zelfevaluatie ca. vier weken voor het bezoek van het visitatieteam moet zijn afgerond (zie tijdschema in paragraaf 4). Dit geeft het team de tijd om het bezoek voor te bereiden. Het is van
 belang dat in elk geval de voorzitter en secretaris van het visitatieteam bekend zijn bij de start van de zelfevaluatie, zodat (in een kennismakingsgesprek) de termijnen met hen kunnen worden afgestemd.
 
-### *Fase 2, Bezoek visitatieteam*
+### *Fase 2 - Bezoek visitatieteam*
 
 De visitatie zelf wordt, als gezegd, uitgevoerd door het visitatieteam, bestaande uit 4 tot 5 collega-visitatoren, en een onafhankelijk voorzitter en secretaris. Het visitatieteam kijkt in hoeverre het beeld dat de organisatie van zichzelf heeft waar het gaat over
 kwaliteit van ontwikkeling en toepassing van algoritmen, overeenkomt met het beeld dat het visitatieteam krijgt op basis van de eigen voorbereiding (doornemen van de zelfevaluatie, evt. aanvullend (literatuur)onderzoek), bezoeken aan relevante onderdelen in de organisatie (in elk geval het MT van de organisatie) en gesprekken
@@ -57,7 +57,7 @@ Na het bezoek (of de bezoeken) stelt het visitatieteam een rapportage op met bev
 
 Het visitatieteam bespreekt het rapport het MT van de organisatie, met het oog op nadere toelichting door het team en het geven van reacties door de organisatie (hoor en wederhoor).
 
-### *Fase 3, Uitvoering van de aanbevelingen*
+### *Fase 3 - Uitvoering van de aanbevelingen*
 
 De organisatie maakt een implementatieplan voor de gedane aanbevelingen.
 Hierin worden acties voor uitbouw of bestendiging van positieve punten opgenomen en acties ter opvolging van verbeterpunten. De acties worden van een concrete realisatietermijn voorzien, zodat zij in een volgende visitatie kunnen worden meegenomen.

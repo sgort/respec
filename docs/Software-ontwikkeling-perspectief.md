@@ -32,9 +32,9 @@
 
 ## Code
 
-| Willen weten                                                                                                                                      |                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| Willen weten<br><br>1. Versiebeheer<br><br>1. Testgevallen<br>2. Bedrijfsregelset<br>3. Toetsscenario<br><br>3. Git workflow<br>4. Test strategie | Geen voorbeeld vooralsnog |
+| Willen weten                                                                                                          |                           |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| 1. Versiebeheer<br>2. Testgevallen<br>3. Bedrijfsregelset<br>4. Toetsscenario<br>5. Git workflow<br>6. Test strategie | Geen voorbeeld vooralsnog |
 
 *Toelichting:*
 

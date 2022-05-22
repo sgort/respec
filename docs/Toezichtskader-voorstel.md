@@ -4,13 +4,13 @@ Dit toezichtskader is ontwikkeld voor regel- of kennisgebaseerde algoritmen.
 
 ## Algemene vragen
 
-### Gebruikte methode / methoden en technieken
+### *Gebruikte methode / methoden en technieken*
 
 - Welke methoden worden gebruikt voor het maken en vastleggen van normen in algoritmen?
 
 - Welke technieken worden gebruikt voor het maken en vastleggen algoritmen?
 
-### Werkproces voor het maken van regels
+### *Werkproces voor het maken van regels*
 
 - Is er een werkproces voor het maken van regels?
 
@@ -22,7 +22,7 @@ Dit toezichtskader is ontwikkeld voor regel- of kennisgebaseerde algoritmen.
 
 - anders, namelijk …
 
-### Het gebruik van regels bij het nemen van bestuursrechtelijke besluiten
+### *Het gebruik van regels bij het nemen van bestuursrechtelijke besluiten*
 
 - Hoe worden regels gebruikt om een bestuursrechtelijk besluit te nemen?
 
@@ -38,7 +38,7 @@ Dit toezichtskader is ontwikkeld voor regel- of kennisgebaseerde algoritmen.
 
 - Worden dezelfde regels gebruikt voor bezwaarzaken en voor beroepszaken?  
 
-### Publicatie van regels
+### *Publicatie van regels*
 
 - Hoe worden regels gepubliceerd?
 
@@ -62,7 +62,7 @@ Dit toezichtskader is ontwikkeld voor regel- of kennisgebaseerde algoritmen.
 
 Er wordt een kleine steekproef genomen uit de totale regelset. De geselecteerde regels worden gedetailleerd onderzocht. Hierbij wordt onderzocht of deze regels een logisch gevolg zijn van de methoden en technieken die een organisatie naar eigen zeggen gebruikt. Waar relevant worden ook uitspraken gedaan over de toepassing van de werkprocessen van het maken van regels.
 
-### Generieke regels
+### *Generieke regels*
 
 Er worden een aantal generieke regels geselecteerd, zoals:
 
@@ -74,11 +74,11 @@ Er worden een aantal generieke regels geselecteerd, zoals:
 
 - regels over het vaststellen van nationaliteit (indienen relevant).
 
-### Domeinspecifieke regels
+### *Domeinspecifieke regels*
 
 Er worden een aantal domeinspecifieke regels geselecteerd, zoals een aantal regels over het toekennen bij studiefinanciering bij DUO.
 
-### Wat wordt er onderzocht?
+### *Wat wordt er onderzocht?*
 
 - Kunnen regels worden herleid tot bronnen?
 
