@@ -12,6 +12,8 @@ Het juridisch perspectief: kernvraag die de jurist beantwoord wil hebben: Is de 
 
 - Is bij wet bepaald welke gegevens van andere bestuursorganen gebruikt moeten worden?
 
+- Extra punt komt hier. 
+
 ## Analyse
 
 - Hoe wordt de analyse van de verzamelde bronnen (zie A4 van Robert) gedaan?
