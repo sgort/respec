@@ -1,0 +1,144 @@
+/*-------------------------------------------------------------------------------------
+//-- File. . . :  nlgovstyle.css
+//-- Bevat . . :  Template voor de  stylesheet voor respec  
+//--              Gebaseerd op https://github.com/Geonovum/respec/wiki
+//--              Deze file mag worden neergezet in de root-directory van de 
+//--              betreffende standaard, maar ook 1 niveau lager in de map "docs".
+//--              Gedefinieerde stijlen overschrijven de default stijlen.  
+//-- Door. . . :  Jan van Gelder
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-- Log . . . :  20181009 - JvG - Initiele versie
+//--              20220522 - SG - Aangepast voor gebruik door BZK voor LegitiMaat
+//-----------------------------------------------------------------------------------*/
+
+@import "@utrecht/components/blockquote/css/mixin";
+@import "@utrecht/components/document/css/mixin";
+@import "@utrecht/components/emphasis/html";
+@import "@utrecht/components/heading-1/css/mixin";
+@import "@utrecht/components/heading-2/css/mixin";
+@import "@utrecht/components/heading-3/css/mixin";
+@import "@utrecht/components/heading-4/css/mixin";
+@import "@utrecht/components/heading-5/css/mixin";
+@import "@utrecht/components/heading-6/css/mixin";
+@import "@utrecht/components/link/html";
+@import "@utrecht/components/ordered-list/css/mixin";
+@import "@utrecht/components/paragraph/css/mixin";
+@import "@utrecht/components/separator/html";
+@import "@utrecht/components/surface/css";
+@import "@utrecht/components/table/html";
+@import "@utrecht/components/unordered-list/css/mixin";
+
+/*-- Design tokens. Should be migrated to `tokens.json` files */
+:root,
+.nlgov-theme {
+  --utrecht-table-border-width: 1px;
+  --utrecht-table-border-color: grey;
+  --utrecht-table-header-background-color: grey;
+  --utrecht-table-header-color: white;
+  --utrecht-table-body-border-color: darkolivegreen; /* TODO: Investigate if this token exists, implement it perhaps */
+  --utrecht-table-body-background-color: lightgrey;
+  --utrecht-table-row-alternate-even-background-color: darkgrey;
+}
+
+html {
+  @include utrecht-document;
+  @include utrecht-surface;
+}
+
+h1 {
+  @include utrecht-heading-1;
+}
+
+h2 {
+  @include utrecht-heading-2;
+}
+
+h3 {
+  @include utrecht-heading-3;
+}
+
+h4 {
+  @include utrecht-heading-4;
+}
+
+h5 {
+  @include utrecht-heading-5;
+}
+
+h6 {
+  @include utrecht-heading-6;
+}
+
+/*-- Definitie van Image ------------------------------------------------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+/*-- Definite van het LegitiMaat logo bovenaan Respec document ------------------------*/
+img#LegitiMaat {
+  width: 132px;
+  height: 67px;
+}
+
+/*-- Definite van BlockQuotes (uitgelichte tekstblokken) ----------------------------*/
+blockquote {
+  @include utrecht-blockquote;
+
+  /* margin-left: 20px !important; */
+  font-family: "Esteban", serif !important;
+  font-style: italic;
+  border-color: transparent !important;
+  border-style: none !important;
+  background-color: darkgray;
+  color: white;
+}
+
+/*-- Optioneel een symbool voor de blockquote --------------------------------------*/
+blockquote:before {
+  display: block;
+  height: 0;
+  /* content: "|"; */
+  margin-left: -0.95em;
+  font: italic 400%/1 Esteban, serif;
+  color: grey;
+}
+
+/*-- Definite van tabellen ---------------------------------------------------------*/
+table {
+  empty-cells: show;
+  min-width: 90%;
+}
+
+/*-- Definite van de kopregel van een tabel ----------------------------------------*/
+thead {
+}
+
+/*-- Definite van de body van een tabel --------------------------------------------*/
+tbody {
+}
+
+/*-- Definite van de tabel-rij (deze zorgt voor 2 kleuren in de rijen) -------------*/
+tr:nth-child(even) {
+  background-color: darkgrey; /* TODO:  Remove when design token works */
+}
+
+/*-- Definite van de tabel-cel (data) ----------------------------------------------*/
+td {
+  min-width: 100px; /* lege kolommen hebben deze minimale breedte */
+}
+
+/*-- Definite van rode tekst -------------------------------------------------------*/
+r {
+  color: red;
+}
+
+/*-- Definite van rose tekstblok ---------------------------------------------------*/
+div#remark {
+  border-color: darkblue;
+  border-style: solid;
+  background-color: rosybrown;
+  color: darkblue;
+}
