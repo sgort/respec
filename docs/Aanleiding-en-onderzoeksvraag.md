@@ -25,7 +25,7 @@ idee om deze documenten te gaan onderzoeken.
 
 Om ergens te kunnen starten willen wij aan de hand van deze beslisregels of andere vormen van beschrijvingen met medewerkers van uitvoeringsinstellingen ontdekken wat een geschikte onderzoeksmethode zou zijn. Hierdoor wordt geborgd dat het resultaat (het opleveren van een multidisciplinaire werkmethode) aansluit bij de praktijk. Bijkomend voordeel is er ook voor de uitvoeringsinstellingen. Door dit onderzoek te faciliteren, wordt voorkomen dat er later vanuit een hiërarchische positie eisen aan de uitvoering gesteld worden die de uitvoering eerder hinderen dan faciliteren. Ook kan het leiden tot een pool van deskundigen die elkaars processen beoordelen (denk aan een gateway review). Dit betekent dat het lerend vermogen van de overheid toe kan nemen.
 
-![method](/home/steven/Development/respec/docs/figures/method.webp)
+![method](docs/figures/method.webp)
 
 ### *Doel*
 
