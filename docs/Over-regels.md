@@ -1,6 +1,6 @@
 # Regels?
 
-## **Over wettelijke regels, regels en algoritmen**
+## Over wettelijke regels, regels en algoritmen
 
 Als je de legitimiteit wilt beoordelen van iets dat door een machine wordt gedaan, dan heb je een interface nodig tussen de code die de machine gebruikt en de juridische bronnen die bepalen wat de machine moet doen.
 
@@ -10,7 +10,7 @@ Veel overheidsorganisaties gebruiken hiervoor een regelgebaseerde oplossing; den
 
 Doel van onze aanpak is om de kwaliteit van het interpreteren van wet- en regelgeving en het coderen van algoritmen op een gestandaardiseerde manier te beschrijven. Dat maakt het mogelijk om de kwaliteit van algoritmen te verbeteren aan de hand van interne discussie en/of externe toetsing.
 
-## **Scope van de LegitiMaat**
+## Scope van de LegitiMaat
 
 Geautomatiseerde uitvoering van wet- en regelgeving (inclusief uitwerking of interpretatie in beleidsregels) door de overheid met behulp van kennisgebaseerde algoritmen.
 
