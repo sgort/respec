@@ -1,10 +1,10 @@
-# **Perspectieven**
+# Perspectieven
 
 Ik ga uit van drie perspectieven van waaruit we algoritmen beschouwen/willen kunnen beschouwen: dat van de jurist, de ontwerper/ontwikkelaar en de auditor. Met inzicht in de aspecten die die drie interesseren (, kan de organisatie zelf zorgen dat het proces voor ontwikkelen en gebruiken van algoritmen zo wordt ingericht dat het op die aspecten 'verantwoord' is. Zo is men eigenlijk zijn eigen toezichthouder: het toezicht zit geïntergreerd in de werkwijze (daarom ook de LegitiMaat). Als er een toezichthouder langskomt (AP, ADR, de burger) dan kan tekst en uitleg worden gegeven zonder dat dat al teveel moeite kost. 
 
 Vanuit die perspectieven heb ik uit de maakdag de volgende vragen gedestilleerd (je zou ze overigens ook meer als eisen/requirements kunnen formuleren, dat is misschien nog wat meer werkmethode-achtig ipv. toezicht-achtig).  
 
-## **Jurist**
+## Jurist
 
 - Welke juridische bronnen liggen ten grondslag aan ontwikkeling of wijziging van algoritmen?  
 
@@ -24,7 +24,7 @@ Vanuit die perspectieven heb ik uit de maakdag de volgende vragen gedestilleerd 
 - Vormen de algoritmen die gemaakt worden op basis van analyse van 
   juridische bronnen daadwerkelijk de basis voor de executie in systemen?  
 
-## **Ontwikkelaar**
+## Ontwikkelaar
 
 - Wat zijn de triggers voor ontwikkeling of wijziging van een algoritme?  
 
@@ -46,7 +46,7 @@ Vanuit die perspectieven heb ik uit de maakdag de volgende vragen gedestilleerd 
 
 - Hoe worden algoritmen in natuurlijke taal omgezet naar executeerbaar formaat (handmatig, geautomatiseerd)?  
 
-## **Auditor**
+## Auditor
 
 - Hoe is de organisatie ingericht? Welke onderdelen zijn betrokken 
   bij het proces van ontwikkeling of wijziging van een algoritme?  
